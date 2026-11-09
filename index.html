@@ -143,13 +143,6 @@
   .stat b{display:block;font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(30px,3.4vw,40px);color:var(--pink-600);line-height:1.1}
   .stat span{display:block;margin-top:6px;font-size:15px;color:var(--ink-2);line-height:1.4}
 
-  /* Onde atua */
-  .roles{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .role{border-radius:24px;overflow:hidden;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
-  .role picture img{aspect-ratio:4/3;object-fit:cover;object-position:center 20%;width:100%}
-  .role-tx{padding:24px}
-  .role h3{font-size:19px;margin-bottom:8px}
-  .role p{font-size:15.5px;color:var(--ink-2)}
 
   /* Como funciona */
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
@@ -251,13 +244,10 @@
   .ab-list svg{width:26px;height:26px;flex:none}
 
   /* Cards com movimento */
-  .card,.step,.benefit,.role{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
-  .card:hover,.step:hover,.benefit:hover,.role:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(122,46,82,.12);border-color:var(--pink-100)}
+  .card,.step,.benefit{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .card:hover,.step:hover,.benefit:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(122,46,82,.12);border-color:var(--pink-100)}
   .ico{background:linear-gradient(135deg,var(--pink-50),var(--pink-100))}
   .ico.t{background:linear-gradient(135deg,var(--teal-50),var(--teal-100))}
-  .role picture{overflow:hidden;display:block}
-  .role picture img{transition:transform .6s ease}
-  .role:hover picture img{transform:scale(1.05)}
 
   /* Manchas rosa suaves nas seções coloridas */
   .sec-pink,.sec-soft{position:relative;overflow:hidden}
@@ -275,6 +265,19 @@
   .tm-btn{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--pink-100);background:#fff;color:var(--pink-600);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s ease,color .2s ease}
   .tm-btn:hover{background:var(--pink);color:#fff;border-color:var(--pink)}
   .tm-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+
+  /* Galeria de palco */
+  .bento{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-template-rows:260px 260px;gap:16px}
+  .b-item{position:relative;margin:0;border-radius:22px;overflow:hidden;background:var(--pink-50);box-shadow:0 10px 30px rgba(122,46,82,.12)}
+  .b-item picture,.b-item img{width:100%;height:100%;display:block}
+  .b-item img{object-fit:cover;transition:transform .7s ease}
+  .b-item:hover img{transform:scale(1.05)}
+  .b-item::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,34,41,0) 55%,rgba(42,34,41,.72) 100%);pointer-events:none}
+  .b-item figcaption{position:absolute;left:14px;right:14px;bottom:12px;z-index:1;color:#fff;font-family:'Poppins',sans-serif;font-weight:500;font-size:14px;line-height:1.3;text-shadow:0 1px 6px rgba(0,0,0,.35)}
+  .b-tall{grid-row:span 2}
+  .b-wide{grid-column:span 2}
+  .bento .b-item:nth-child(1) img{object-position:center 18%}
+  .bento .b-item:nth-child(3) img{object-position:center 20%}
 
   /* Dúvidas em formato de conversa */
   .chat-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:center;max-width:1020px;margin:0 auto}
@@ -311,7 +314,12 @@
 
   /* Tablet */
   @media (max-width: 1023px){
-    .grid-3,.benefits,.roles{grid-template-columns:1fr 1fr}
+    .grid-3,.benefits{grid-template-columns:1fr 1fr}
+    .bento{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+    .bento .b-item{height:260px}
+    .bento .b-tall,.bento .b-wide{grid-row:auto;grid-column:auto}
+    .bento .b-item:nth-child(1){grid-column:1/-1;height:420px}
+    .bento .b-item:nth-child(2),.bento .b-item:nth-child(5){grid-column:1/-1}
     .steps{grid-template-columns:1fr 1fr}
     .stats{grid-template-columns:1fr 1fr}
     .alert,.about{grid-template-columns:1fr;gap:40px}
@@ -346,7 +354,12 @@
     .hero-proof b{font-size:21px}
     .hero-proof div{align-items:center}
 
-    .grid-3,.benefits,.roles,.steps{grid-template-columns:1fr}
+    .grid-3,.benefits,.steps{grid-template-columns:1fr}
+    .bento{gap:10px}
+    .bento .b-item{height:210px;border-radius:16px}
+    .bento .b-item:nth-child(1){height:360px}
+    .bento .b-item:nth-child(3),.bento .b-item:nth-child(4){height:230px}
+    .b-item figcaption{font-size:12.5px;left:10px;right:10px;bottom:9px}
     .card{padding:24px}
     .creds{grid-template-columns:1fr}
     .about-badge{left:10px;bottom:16px}
@@ -385,6 +398,7 @@
       "image": "https://www.tatianerios.com.br/assets/img/tatiane-jaleco-1000.jpg",
       "url": "https://www.tatianerios.com.br/",
       "sameAs": ["https://www.instagram.com/tatianecrios/"],
+      "memberOf": {"@type": "Organization", "name": "Sociedade Brasileira de Nutrição Oncológica"},
       "knowsAbout": ["Nutrição oncológica", "Alimentação na quimioterapia", "Alimentação na radioterapia", "Desnutrição no câncer"]
     },
     {
@@ -493,17 +507,19 @@
     <div class="ab-track">
       <ul class="ab-list">
         <li><svg aria-hidden="true"><use href="#i-hosp"/></svg>Atua em hospital referência em oncologia na Bahia</li>
+        <li><svg aria-hidden="true"><use href="#i-group"/></svg>Comissão organizadora do CINO 2026, congresso de nutrição oncológica</li>
+        <li><svg aria-hidden="true"><use href="#i-mic"/></svg>Palestrante em congressos de nutrição oncológica</li>
         <li><svg aria-hidden="true"><use href="#i-grad"/></svg>Professora de pós-graduação em nutrição oncológica</li>
-        <li><svg aria-hidden="true"><use href="#i-mic"/></svg>Palestrante em congressos da área</li>
-        <li><svg aria-hidden="true"><use href="#i-book"/></svg>Autora de livros e artigos científicos</li>
+        <li><svg aria-hidden="true"><use href="#i-book"/></svg>Autora de livros e artigos científicos em nutrição oncológica</li>
         <li><svg aria-hidden="true"><use href="#i-award"/></svg>Mestre em Alimentos, Nutrição e Saúde</li>
         <li><svg aria-hidden="true"><use href="#i-group"/></svg>Membro da Sociedade Brasileira de Nutrição Oncológica</li>
       </ul>
       <ul class="ab-list" aria-hidden="true">
         <li><svg aria-hidden="true"><use href="#i-hosp"/></svg>Atua em hospital referência em oncologia na Bahia</li>
+        <li><svg aria-hidden="true"><use href="#i-group"/></svg>Comissão organizadora do CINO 2026, congresso de nutrição oncológica</li>
+        <li><svg aria-hidden="true"><use href="#i-mic"/></svg>Palestrante em congressos de nutrição oncológica</li>
         <li><svg aria-hidden="true"><use href="#i-grad"/></svg>Professora de pós-graduação em nutrição oncológica</li>
-        <li><svg aria-hidden="true"><use href="#i-mic"/></svg>Palestrante em congressos da área</li>
-        <li><svg aria-hidden="true"><use href="#i-book"/></svg>Autora de livros e artigos científicos</li>
+        <li><svg aria-hidden="true"><use href="#i-book"/></svg>Autora de livros e artigos científicos em nutrição oncológica</li>
         <li><svg aria-hidden="true"><use href="#i-award"/></svg>Mestre em Alimentos, Nutrição e Saúde</li>
         <li><svg aria-hidden="true"><use href="#i-group"/></svg>Membro da Sociedade Brasileira de Nutrição Oncológica</li>
       </ul>
@@ -591,11 +607,11 @@
       <div class="txt" data-reveal>
         <h2 class="h2" id="sobre-title">Prazer, eu sou a Tatiane Rios</h2>
         <p style="margin-top:18px">Há mais de 20 anos eu cuido da alimentação de pessoas em tratamento contra o câncer. Trabalho dentro de um hospital referência em oncologia na Bahia e, ao longo da carreira, já são mais de 40 mil pacientes atendidos.</p>
-        <p>Também estou do outro lado, ensinando. Sou professora de pós-graduação e formo outros nutricionistas em nutrição oncológica. Dou palestras em congressos e eventos da área e publiquei livros e artigos científicos.</p>
+        <p>Também estou do outro lado, ensinando. Sou professora de pós-graduação em nutrição oncológica, faço parte da comissão organizadora do CINO 2026, congresso de nutrição oncológica, e dou palestras em congressos e simpósios de oncologia. Também publiquei livros e artigos científicos na área.</p>
         <p>Toda essa experiência me ensinou que não existe receita pronta. Existe escuta, estudo e um plano pensado para o que você está vivendo agora.</p>
         <ul class="creds">
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Mestre em Alimentos, Nutrição e Saúde</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Especialista em nutrição oncológica</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Comissão organizadora do CINO 2026</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Membro da Sociedade Brasileira de Nutrição Oncológica</li>
           <li><svg aria-hidden="true"><use href="#i-check"/></svg>Professora de pós-graduação para nutricionistas</li>
         </ul>
@@ -616,44 +632,49 @@
     </div>
   </section>
 
-  <!-- 6. Onde a Tati atua (trocar as fotos pelas de palestra e aula quando chegarem) -->
-  <section class="sec sec-soft" aria-labelledby="atua-title">
+  <!-- 6. Nos palcos da nutrição oncológica (fotos reais de congressos) -->
+  <section class="sec sec-soft" id="palcos" aria-labelledby="palco-title">
     <div class="wrap">
       <div class="sec-head center" data-reveal>
-        <h2 class="h2" id="atua-title">No hospital, na sala de aula e no consultório</h2>
-        <p class="lead">O mesmo conhecimento que a Tati usa no hospital e ensina para outros nutricionistas chega até você no atendimento online.</p>
+        <h2 class="h2" id="palco-title">Nos palcos da nutrição oncológica</h2>
+        <p class="lead">O que a Tati aprende com os pacientes no hospital, ela leva para congressos e simpósios, onde fala para nutricionistas, médicos e equipes de oncologia. E esse mesmo conhecimento chega até você no atendimento online.</p>
       </div>
-      <div class="roles">
-        <article class="role" data-reveal>
+      <div class="bento">
+        <figure class="b-item b-tall" data-reveal>
           <picture>
-            <source type="image/webp" srcset="assets/img/tatiane-branca-600.webp 600w, assets/img/tatiane-branca-1000.webp 1000w" sizes="(max-width: 759px) 92vw, (max-width: 1023px) 46vw, 370px">
-            <img src="assets/img/tatiane-branca-600.jpg" width="600" height="900" loading="lazy" alt="Tatiane Rios, nutricionista oncológica">
+            <source type="image/webp" srcset="assets/img/palco-tati-500.webp 500w, assets/img/palco-tati-800.webp 800w" sizes="(max-width: 759px) 50vw, 300px">
+            <img src="assets/img/palco-tati-800.jpg" srcset="assets/img/palco-tati-500.jpg 500w, assets/img/palco-tati-800.jpg 800w" sizes="(max-width: 759px) 50vw, 300px" width="800" height="1199" loading="lazy" alt="Tatiane Rios palestrando no CINO 2026, congresso de nutrição oncológica">
           </picture>
-          <div class="role-tx">
-            <h3>Dentro do hospital</h3>
-            <p>Rotina em hospital referência em oncologia na Bahia, ao lado de pacientes em quimioterapia, radioterapia e cirurgia.</p>
-          </div>
-        </article>
-        <article class="role" data-reveal>
+          <figcaption>CINO 2026 · Comissão organizadora</figcaption>
+        </figure>
+        <figure class="b-item b-wide" data-reveal>
           <picture>
-            <source type="image/webp" srcset="assets/img/tatiane-laptop-600.webp 600w, assets/img/tatiane-laptop-1000.webp 1000w" sizes="(max-width: 759px) 92vw, (max-width: 1023px) 46vw, 370px">
-            <img src="assets/img/tatiane-laptop-600.jpg" width="600" height="400" loading="lazy" alt="Tatiane Rios trabalhando no computador">
+            <source type="image/webp" srcset="assets/img/palco-plateia-500.webp 500w, assets/img/palco-plateia-834.webp 834w" sizes="(max-width: 759px) 100vw, 600px">
+            <img src="assets/img/palco-plateia-834.jpg" srcset="assets/img/palco-plateia-500.jpg 500w, assets/img/palco-plateia-834.jpg 834w" sizes="(max-width: 759px) 100vw, 600px" width="834" height="626" loading="lazy" alt="Auditório do CINO 2026 durante palestra de Tatiane Rios">
           </picture>
-          <div class="role-tx">
-            <h3>Na sala de aula e nos congressos</h3>
-            <p>Professora de pós-graduação e palestrante. É ela quem ensina outros nutricionistas a cuidar de pacientes oncológicos.</p>
-          </div>
-        </article>
-        <article class="role" data-reveal>
+          <figcaption>Palestra para o auditório do CINO 2026</figcaption>
+        </figure>
+        <figure class="b-item b-tall" data-reveal>
           <picture>
-            <source type="image/webp" srcset="assets/img/tatiane-mesa-600.webp 600w, assets/img/tatiane-mesa-1000.webp 1000w" sizes="(max-width: 759px) 92vw, (max-width: 1023px) 46vw, 370px">
-            <img src="assets/img/tatiane-mesa-600.jpg" width="600" height="400" loading="lazy" alt="Tatiane Rios em sua mesa de atendimento">
+            <source type="image/webp" srcset="assets/img/palco-close-500.webp 500w, assets/img/palco-close-800.webp 800w" sizes="(max-width: 759px) 50vw, 300px">
+            <img src="assets/img/palco-close-800.jpg" srcset="assets/img/palco-close-500.jpg 500w, assets/img/palco-close-800.jpg 800w" sizes="(max-width: 759px) 50vw, 300px" width="800" height="1199" loading="lazy" alt="Tatiane Rios apresentando dados de estudos clínicos">
           </picture>
-          <div class="role-tx">
-            <h3>No atendimento online</h3>
-            <p>Consulta por vídeo, plano em até 48 horas e suporte pelo WhatsApp. De qualquer cidade do Brasil.</p>
-          </div>
-        </article>
+          <figcaption>Ciência explicada de um jeito que dá para usar</figcaption>
+        </figure>
+        <figure class="b-item" data-reveal>
+          <picture>
+            <source type="image/webp" srcset="assets/img/palco-cino-600.webp 600w, assets/img/palco-cino-1000.webp 1000w" sizes="(max-width: 759px) 50vw, 300px">
+            <img src="assets/img/palco-cino-1000.jpg" srcset="assets/img/palco-cino-600.jpg 600w, assets/img/palco-cino-1000.jpg 1000w" sizes="(max-width: 759px) 50vw, 300px" width="1000" height="666" loading="lazy" alt="Tatiane Rios no palco do CINO 2026 falando sobre cirurgia oncológica e perda muscular">
+          </picture>
+          <figcaption>Cirurgia oncológica e perda muscular</figcaption>
+        </figure>
+        <figure class="b-item" data-reveal>
+          <picture>
+            <source type="image/webp" srcset="assets/img/palco-simposio-600.webp 600w, assets/img/palco-simposio-1000.webp 1000w" sizes="(max-width: 759px) 50vw, 300px">
+            <img src="assets/img/palco-simposio-1000.jpg" srcset="assets/img/palco-simposio-600.jpg 600w, assets/img/palco-simposio-1000.jpg 1000w" sizes="(max-width: 759px) 50vw, 300px" width="1000" height="667" loading="lazy" alt="Tatiane Rios palestrando no IV Simpósio Internacional de Tumores Femininos da Oncologia D’Or">
+          </picture>
+          <figcaption>Simpósio Internacional de Tumores Femininos · Oncologia D’Or</figcaption>
+        </figure>
       </div>
     </div>
   </section>
