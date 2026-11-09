@@ -297,6 +297,23 @@
   .feat-time{position:absolute;right:16px;bottom:8px;font-size:12px;color:var(--muted)}
   .feat figcaption{margin-top:16px;font-size:14px;color:var(--ink-2)}
 
+  /* Faixa com vídeo do palco */
+  .stage{position:relative;overflow:hidden;background:#2A1426;color:#fff;padding:84px 0}
+  .stage-bg{position:absolute;inset:-40px;background:url('assets/video/cino-palco-blur.jpg') center/cover no-repeat;opacity:.55;filter:saturate(1.2)}
+  .stage::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(42,20,38,.96) 0%,rgba(84,30,70,.88) 45%,rgba(156,63,128,.55) 100%);pointer-events:none}
+  .stage-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .stage h2{color:#fff;font-size:clamp(27px,3.2vw,40px)}
+  .stage-tx>p{color:#F3DDEB;font-size:18px;margin-top:18px;max-width:560px}
+  .stage-facts{list-style:none;margin:28px 0 32px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .stage-facts li{border-left:2px solid rgba(244,183,221,.6);padding-left:14px}
+  .stage-facts b{display:block;font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(20px,2.2vw,26px);color:#fff;line-height:1.15}
+  .stage-facts span{display:block;font-size:14px;color:#EBCFE0;line-height:1.4;margin-top:4px}
+  .stage-video{position:relative;margin:0 auto;width:100%;max-width:340px;aspect-ratio:464/832;border-radius:28px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45),0 0 0 6px rgba(255,255,255,.08)}
+  .stage-video video{width:100%;height:100%;object-fit:cover;display:block;background:#2A1426}
+  .stage-video figcaption{position:absolute;left:14px;bottom:14px;display:inline-flex;align-items:center;gap:8px;background:rgba(42,20,38,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:#fff;font-size:13px;font-weight:600;padding:7px 12px;border-radius:999px}
+  .stage-video figcaption i{width:8px;height:8px;border-radius:50%;background:#FF5C8A;box-shadow:0 0 0 0 rgba(255,92,138,.6);animation:pulse 1.8s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,92,138,.6)}70%{box-shadow:0 0 0 10px rgba(255,92,138,0)}100%{box-shadow:0 0 0 0 rgba(255,92,138,0)}}
+
   /* Galeria de palco */
   .bento{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-template-rows:260px 260px;gap:16px}
   .b-item{position:relative;margin:0;border-radius:22px;overflow:hidden;background:var(--pink-50);box-shadow:0 10px 30px rgba(122,46,82,.12)}
@@ -314,7 +331,7 @@
   .final{background:linear-gradient(130deg,#8E3C74,#C2559F,#D66DB7,#B84E99,#8E3C74);background-size:300% 300%;animation:gradShift 14s ease-in-out infinite alternate}
 
   @media (prefers-reduced-motion: reduce){
-    .shine,.hero-tx>*,.btn::after,.authbar,.final,.diff,.sec-pink::before,.sec-soft::before{animation:none}
+    .shine,.hero-tx>*,.btn::after,.authbar,.final,.diff,.stage-video figcaption i,.sec-pink::before,.sec-soft::before{animation:none}
     .ab-track{animation:none;width:auto;flex-wrap:wrap;justify-content:center}
     .ab-list[aria-hidden]{display:none}
     .ab-list{flex-wrap:wrap;justify-content:center;row-gap:10px}
@@ -329,6 +346,9 @@
     .bento .b-item:nth-child(1){grid-column:1/-1;height:420px}
     .bento .b-item:nth-child(2),.bento .b-item:nth-child(5){grid-column:1/-1}
     .how{grid-template-columns:1fr}
+    .stage-inner{grid-template-columns:1fr;gap:40px}
+    .stage-tx{text-align:center}
+    .stage-tx>p{margin-left:auto;margin-right:auto}
     .diff{position:static}
     .stats{grid-template-columns:1fr 1fr}
     .alert,.about{grid-template-columns:1fr;gap:40px}
@@ -388,6 +408,14 @@
 
     .tcard{width:82vw;max-width:340px;margin-right:14px;padding:22px}
     .feat{padding:22px 16px 20px;margin-bottom:32px}
+    .stage{padding:0;display:flex;flex-direction:column}
+    .stage-bg,.stage::after{display:none}
+    .stage-inner{display:flex;flex-direction:column;padding:0}
+    .stage-video{order:-1;max-width:none;border-radius:0;box-shadow:none;aspect-ratio:464/700}
+    .stage-tx{position:relative;margin-top:-170px;padding:150px 18px 56px;background:linear-gradient(180deg,rgba(42,20,38,0) 0%,rgba(42,20,38,.92) 110px,#2A1426 170px)}
+    .stage-facts{grid-template-columns:1fr;gap:12px;text-align:left;max-width:300px;margin:24px auto 28px}
+    .stage .btn{width:100%}
+    .stage-video figcaption{top:14px;bottom:auto}
     .feat-bubble{padding:14px 16px 24px}
     .tm-ctrl{display:none}
 
@@ -651,6 +679,32 @@
         <div class="stat"><b data-count="48" data-suf="h">48h</b><span>para receber as suas estratégias alimentares</span></div>
         <div class="stat"><b data-count="30" data-suf=" dias">30 dias</b><span>de acompanhamento pelo WhatsApp</span></div>
       </div>
+    </div>
+  </section>
+
+  <!-- 5b. Vídeo do CINO 2026 (sem som, em loop) -->
+  <section class="stage" aria-labelledby="stage-title">
+    <div class="stage-bg" aria-hidden="true"></div>
+    <div class="wrap stage-inner">
+      <div class="stage-tx" data-reveal>
+        <h2 id="stage-title">Quando a Tati sobe ao palco, quem escuta são outros profissionais da oncologia</h2>
+        <p>No CINO 2026, congresso de nutrição oncológica, ela falou para um auditório cheio de nutricionistas, médicos e equipes de oncologia. É esse mesmo conhecimento que vai cuidar da sua alimentação durante o tratamento.</p>
+        <ul class="stage-facts">
+          <li><b>+40 mil</b><span>pacientes oncológicos atendidos</span></li>
+          <li><b>+20 anos</b><span>dedicados à nutrição oncológica</span></li>
+          <li><b>CINO 2026</b><span>comissão organizadora e palestrante</span></li>
+        </ul>
+        <a class="btn" href="https://api.cqc.onpromedia.com.br/t/69643DB5" target="_blank" rel="noopener" data-cta="video-palco">
+          <svg aria-hidden="true"><use href="#i-wa"/></svg> Quero ser acompanhada pela Tati
+        </a>
+      </div>
+      <figure class="stage-video" data-reveal>
+        <video id="stage-video" muted loop playsinline preload="none" poster="assets/video/cino-palco-poster.jpg" aria-label="Vídeo sem som: auditório do CINO 2026 cheio e Tatiane Rios palestrando no palco">
+          <source data-src="assets/video/cino-palco.webm" type="video/webm">
+          <source data-src="assets/video/cino-palco.mp4" type="video/mp4">
+        </video>
+        <figcaption><i></i> CINO 2026 · Salvador, Bahia</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -976,6 +1030,20 @@
         }); }
         requestAnimationFrame(tick);
       })(last);
+    }
+  }
+
+  // Vídeo do palco: só carrega perto da tela, sem som, e pausa fora dela
+  var sv=d.getElementById('stage-video');
+  if(sv){
+    var saveData=navigator.connection && navigator.connection.saveData;
+    var loaded=false;
+    function loadVid(){ if(loaded) return; loaded=true; [].slice.call(sv.querySelectorAll('source')).forEach(function(s){ s.src=s.getAttribute('data-src'); }); sv.load(); }
+    if(!reduce && !saveData && 'IntersectionObserver' in window){
+      new IntersectionObserver(function(es){ es.forEach(function(e){
+        if(e.isIntersecting){ loadVid(); var pr=sv.play(); if(pr&&pr.catch) pr.catch(function(){}); }
+        else if(loaded){ sv.pause(); }
+      }); },{rootMargin:'200px 0px'}).observe(sv);
     }
   }
 
