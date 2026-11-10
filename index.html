@@ -155,7 +155,9 @@
   .fit-card h3{font-size:21px;margin-bottom:18px}
   .fit-head{display:flex;align-items:center;gap:16px;margin-bottom:20px}
   .fit-head h3{margin:0}
-  .fit-face{font-size:44px;line-height:1;flex:none}
+  .fit-face{width:48px;height:48px;flex:none}
+  .fit-yes .fit-face{color:#2E9E5B}
+  .fit-no .fit-face{color:#D9534F}
   .fit-card ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
   .fit-card li{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:1.5}
   .fit-card li>span{flex:none;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center}
@@ -669,11 +671,11 @@
       </div>
       <div class="fit">
         <div class="fit-card fit-yes" data-reveal>
-          <div class="fit-head"><span class="fit-face" aria-hidden="true">😊</span><h3>É para você que</h3></div>
+          <div class="fit-head"><svg class="fit-face" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="22" cy="25" r="4" fill="currentColor"/><circle cx="42" cy="25" r="4" fill="currentColor"/><path d="M19 39c7 9 19 9 26 0" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg><h3>É para você que</h3></div>
           <ul><li><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Busca uma especialista que domina a nutrição oncológica, com mais de 20 anos de experiência e mais de 30 mil pacientes atendidos</li><li><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Quer comer sem medo, sabendo o que pode, o que evitar e por quê</li><li><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Quer se sentir segura e acompanhada de perto em cada fase do tratamento</li><li><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Quer atravessar o tratamento com mais força, cuidando do peso, do músculo e dos sintomas</li></ul>
         </div>
         <div class="fit-card fit-no" data-reveal>
-          <div class="fit-head"><span class="fit-face" aria-hidden="true">😟</span><h3>Não é para você que</h3></div>
+          <div class="fit-head"><svg class="fit-face" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="22" cy="25" r="4" fill="currentColor"/><circle cx="42" cy="25" r="4" fill="currentColor"/><path d="M20 46c7-8 17-8 24 0" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg><h3>Não é para você que</h3></div>
           <ul><li><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></span>Busca atendimento pelo convênio. O meu atendimento é particular</li><li><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></span>Procura orientações genéricas ou um cardápio pronto, igual para todo mundo</li><li><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></span>Espera uma solução milagrosa ou algo que substitua o tratamento médico</li></ul>
         </div>
       </div>
