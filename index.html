@@ -9,7 +9,7 @@
 <!-- End Google Tag Manager -->
 
 <title>Nutricionista Oncológica Online | Tatiane Rios | Alimentação na Quimioterapia</title>
-<meta name="description" content="Enjoo, falta de apetite e perda de peso no tratamento do câncer? Nutricionista oncológica com mais de 20 anos de experiência. Estratégias alimentares para a sua rotina e o seu tratamento em até 48h, com 30 dias de acompanhamento online.">
+<meta name="description" content="Nutricionista oncológica com mais de 20 anos de dedicação exclusiva à oncologia e mais de 30 mil pacientes atendidos. Estratégias alimentares para cada fase do tratamento do câncer, com acompanhamento online.">
 <link rel="canonical" href="https://www.tatianerios.com.br/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#C2559F">
@@ -103,7 +103,13 @@
 
 
   /* Sintomas */
-  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .grid-3,.grid-4{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .grid-4{grid-template-columns:repeat(4,1fr);gap:16px}
+  .card-top{display:flex;align-items:flex-start;justify-content:space-between}
+  .card-n{font-family:'Poppins',sans-serif;font-weight:600;font-size:13px;color:var(--muted);letter-spacing:.04em}
+  .grid-4 .card{padding:22px}
+  .grid-4 .card h3{font-size:17.5px}
+  .grid-4 .card p{font-size:15px}
   .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:0 4px 18px rgba(122,46,82,.05)}
   .card h3{font-size:19px;margin:16px 0 8px}
   .card p{font-size:16px;color:var(--ink-2)}
@@ -134,11 +140,11 @@
   .about-badge span{font-size:13px;color:var(--muted)}
   .about .txt p{color:var(--ink-2);font-size:17px}
   .about .txt p+p{margin-top:16px}
-  .creds{list-style:none;padding:0;margin:28px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .creds{list-style:none;padding:0;margin:24px 0 0;display:grid;grid-template-columns:1fr;gap:10px}
   .creds li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px;line-height:1.4;background:var(--pink-50);border-radius:14px;padding:13px 14px}
   .creds li svg{flex:none;width:20px;height:20px;color:var(--pink-600);margin-top:1px}
 
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:64px}
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
   .stat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;text-align:center}
   .stat b{display:block;font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(30px,3.4vw,40px);color:var(--pink-600);line-height:1.1}
   .stat span{display:block;margin-top:6px;font-size:15px;color:var(--ink-2);line-height:1.4}
@@ -165,6 +171,8 @@
   .diff ul{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:16px}
   .diff li{padding-left:16px;border-left:2px solid rgba(255,255,255,.45)}
   .diff li b{display:block;font-family:'Poppins',sans-serif;font-weight:600;font-size:16px}
+  .tl-note{display:flex;gap:8px;align-items:flex-start;margin-top:14px;padding:10px 12px;border-radius:12px;background:var(--pink-50);color:var(--pink-700);font-size:14.5px;font-weight:600}
+  .tl-note svg{flex:none;width:18px;height:18px;margin-top:2px}
   .diff li span{display:block;font-size:14.5px;line-height:1.5;color:#F9E4F1;margin-top:2px}
   .diff .btn{width:100%;font-size:15.5px;padding:16px 20px}
 
@@ -296,37 +304,13 @@
   .feat-time{position:absolute;right:16px;bottom:8px;font-size:12px;color:var(--muted)}
   .feat figcaption{margin-top:16px;font-size:14px;color:var(--ink-2)}
 
-  /* Faixa com vídeo do palco */
-  .stage{position:relative;overflow:hidden;color:#fff;padding:88px 0;background:radial-gradient(60% 80% at 78% 50%,rgba(214,109,183,.28),rgba(214,109,183,0) 70%),radial-gradient(50% 70% at 0% 100%,rgba(79,163,169,.14),rgba(79,163,169,0) 70%),#2A1426}
-  .stage-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
-  .stage h2{color:#fff;font-size:clamp(26px,3vw,38px)}
-  .stage-tx>p{color:#EBD3E2;font-size:17.5px;margin-top:18px;max-width:560px}
-  .stage-facts{list-style:none;margin:30px 0 32px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-  .stage-facts li{display:flex;flex-direction:column;gap:12px;padding:18px 16px;border-radius:18px;background:linear-gradient(160deg,rgba(255,255,255,.10),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:transform .25s ease,border-color .25s ease}
-  .stage-facts li:hover{transform:translateY(-3px);border-color:rgba(244,183,221,.45)}
-  .sf-ico{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--pink),var(--pink-600));box-shadow:0 8px 20px rgba(214,109,183,.35)}
-  .sf-ico svg{width:22px;height:22px;color:#fff}
-  .stage-facts li:nth-child(2) .sf-ico{background:linear-gradient(135deg,#6CC0C5,var(--teal));box-shadow:0 8px 20px rgba(79,163,169,.3)}
-  .stage-facts b{display:block;font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(21px,2.1vw,26px);color:#fff;line-height:1.1}
-  .stage-facts div span{display:block;font-size:13.5px;color:#E3C6D8;line-height:1.4;margin-top:4px}
-  .stage-video{position:relative;margin:0 auto;width:100%;max-width:340px;aspect-ratio:464/832;border-radius:28px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.12)}
-  .stage-video video{width:100%;height:100%;object-fit:cover;display:block;background:#2A1426}
-  .stage-video figcaption{position:absolute;left:14px;bottom:14px;z-index:1;display:inline-flex;align-items:center;gap:8px;background:rgba(42,20,38,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:#fff;font-size:13px;font-weight:600;padding:7px 12px;border-radius:999px}
-  .stage-video figcaption i{width:8px;height:8px;border-radius:50%;background:#FF5C8A;animation:pulse 1.8s infinite}
+  /* Vídeo do congresso no "Sobre" */
+  .stage-video{position:relative;margin:0 auto;width:100%;max-width:360px;aspect-ratio:464/832;border-radius:28px;overflow:hidden;background:#2A1426;box-shadow:var(--shadow)}
+  .stage-video video{width:100%;height:100%;object-fit:cover;display:block}
+  .stage-video figcaption{position:absolute;left:12px;right:12px;bottom:12px;display:flex;align-items:center;gap:8px;background:rgba(42,20,38,.74);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:#fff;font-size:12.5px;font-weight:600;line-height:1.3;padding:8px 12px;border-radius:14px}
+  .stage-video figcaption i{flex:none;width:8px;height:8px;border-radius:50%;background:#FF5C8A;animation:pulse 1.8s infinite}
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,92,138,.6)}70%{box-shadow:0 0 0 10px rgba(255,92,138,0)}100%{box-shadow:0 0 0 0 rgba(255,92,138,0)}}
 
-  /* Galeria de palco */
-  .bento{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-template-rows:260px 260px;gap:16px}
-  .b-item{position:relative;margin:0;border-radius:22px;overflow:hidden;background:var(--pink-50);box-shadow:0 10px 30px rgba(122,46,82,.12)}
-  .b-item picture,.b-item img{width:100%;height:100%;display:block}
-  .b-item img{object-fit:cover;transition:transform .7s ease}
-  .b-item:hover img{transform:scale(1.05)}
-  .b-item::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,34,41,0) 55%,rgba(42,34,41,.72) 100%);pointer-events:none}
-  .b-item figcaption{position:absolute;left:14px;right:14px;bottom:12px;z-index:1;color:#fff;font-family:'Poppins',sans-serif;font-weight:500;font-size:14px;line-height:1.3;text-shadow:0 1px 6px rgba(0,0,0,.35)}
-  .b-tall{grid-row:span 2}
-  .b-wide{grid-column:span 2}
-  .bento .b-item:nth-child(1) img{object-position:center 18%}
-  .bento .b-item:nth-child(3) img{object-position:center 20%}
 
   /* CTA final com degradê em movimento */
   .final{background:linear-gradient(130deg,#8E3C74,#C2559F,#D66DB7,#B84E99,#8E3C74);background-size:300% 300%;animation:gradShift 14s ease-in-out infinite alternate}
@@ -340,18 +324,9 @@
 
   /* Tablet */
   @media (max-width: 1023px){
-    .grid-3,.benefits{grid-template-columns:1fr 1fr}
-    .bento{grid-template-columns:1fr 1fr;grid-template-rows:auto}
-    .bento .b-item{height:260px}
-    .bento .b-tall,.bento .b-wide{grid-row:auto;grid-column:auto}
-    .bento .b-item:nth-child(1){grid-column:1/-1;height:420px}
-    .bento .b-item:nth-child(2),.bento .b-item:nth-child(5){grid-column:1/-1}
+    .grid-3,.grid-4,.benefits{grid-template-columns:1fr 1fr}
     .how{grid-template-columns:1fr}
-    .stage-inner{grid-template-columns:1fr;gap:40px}
-    .stage-tx{text-align:center}
-    .stage-tx>p{margin-left:auto;margin-right:auto}
     .diff{position:static}
-    .stats{grid-template-columns:1fr 1fr}
     .alert,.about{grid-template-columns:1fr;gap:40px}
     .foot-grid{grid-template-columns:1fr 1fr 1fr}
     .foot-brand{grid-column:1/-1}
@@ -386,37 +361,23 @@
     .hero-proof b{font-size:21px}
     .hero-proof div{align-items:center}
 
-    .grid-3,.benefits{grid-template-columns:1fr}
+    .grid-3,.grid-4,.benefits{grid-template-columns:1fr}
     .timeline::before{left:21px}
     .tl-step{grid-template-columns:44px 1fr;gap:12px}
     .tl-dot{width:44px;height:44px}
     .tl-dot svg{width:21px;height:21px}
     .tl-card{padding:18px}
     .diff{padding:26px 20px}
-    .bento{gap:10px}
-    .bento .b-item{height:210px;border-radius:16px}
-    .bento .b-item:nth-child(1){height:360px}
-    .bento .b-item:nth-child(3),.bento .b-item:nth-child(4){height:230px}
-    .b-item figcaption{font-size:12.5px;left:10px;right:10px;bottom:9px}
     .card{padding:24px}
     .creds{grid-template-columns:1fr}
     .about-badge{left:10px;bottom:16px}
-    .stats{gap:12px;margin-top:44px}
+    .stats{gap:10px;margin-top:18px}
     .stat{padding:20px 12px}
     .alert-box{padding:30px 24px}
     .alert-box .btn,.final .btn,.about .btn{width:100%}
 
     .tcard{width:82vw;max-width:340px;margin-right:14px;padding:22px}
     .feat{padding:22px 16px 20px;margin-bottom:32px}
-    .stage{padding:0;background:#2A1426}
-    .stage-inner{display:flex;flex-direction:column;padding:0;gap:0}
-    .stage-video{order:-1;max-width:none;border-radius:0;box-shadow:none;aspect-ratio:464/720}
-    .stage-video::after{content:'';position:absolute;left:0;right:0;bottom:0;height:45%;background:linear-gradient(180deg,rgba(42,20,38,0) 0%,rgba(42,20,38,.75) 55%,#2A1426 100%);pointer-events:none}
-    .stage-tx{position:relative;z-index:1;margin-top:-90px;padding:0 18px 56px}
-    .stage-facts{grid-template-columns:1fr;gap:10px;text-align:left;margin:24px 0 28px}
-    .stage-facts li{flex-direction:row;align-items:center;gap:14px;padding:14px 16px}
-    .stage .btn{width:100%}
-    .stage-video figcaption{top:14px;bottom:auto}
     .feat-bubble{padding:14px 16px}
     .feat-lead{font-size:15.5px}
     .tm-ctrl{display:none}
@@ -437,8 +398,9 @@
       "@id": "https://www.tatianerios.com.br/#tatiane",
       "name": "Tatiane Rios",
       "jobTitle": "Nutricionista Oncológica",
-      "description": "Nutricionista especializada em nutrição oncológica, mestre em Alimentos, Nutrição e Saúde, com mais de 20 anos de experiência no cuidado de pacientes em tratamento contra o câncer.",
-      "image": "https://www.tatianerios.com.br/assets/img/palco-retrato-800.jpg",
+      "description": "Nutricionista especializada em oncologia, com mais de 20 anos de dedicação exclusiva ao cuidado de pessoas com câncer e mais de 30 mil pacientes oncológicos atendidos. Especialista em Nutrição Oncológica pela SBNO, mestre em Alimentos, Nutrição e Saúde pela UFBA e sócia-fundadora e Diretora Científica da Academia Brasileira de Nutrição Oncológica (ABNO).",
+      "image": "https://www.tatianerios.com.br/og-image.jpg",
+      "alumniOf": {"@type": "CollegeOrUniversity", "name": "Universidade Federal da Bahia"},
       "url": "https://www.tatianerios.com.br/",
       "sameAs": ["https://www.instagram.com/tatianecrios/"],
       "memberOf": {"@type": "Organization", "name": "Sociedade Brasileira de Nutrição Oncológica"},
@@ -450,7 +412,7 @@
       "name": "Tatiane Rios | Nutricionista Oncológica",
       "url": "https://www.tatianerios.com.br/",
       "image": "https://www.tatianerios.com.br/og-image.jpg",
-      "description": "Acompanhamento nutricional online para pacientes em tratamento oncológico: consulta, análise de exames, estratégias alimentares em até 48 horas e 30 dias de acompanhamento pelo WhatsApp.",
+      "description": "Acompanhamento nutricional online para pacientes em tratamento oncológico: consulta, análise de exames, plano alimentar personalizado em até 48 horas e acompanhamento contínuo pelo WhatsApp, de 30 ou 90 dias.",
       "medicalSpecialty": "DietNutrition",
       "areaServed": {"@type": "Country", "name": "Brasil"},
       "founder": {"@id": "https://www.tatianerios.com.br/#tatiane"},
@@ -533,18 +495,18 @@
     </picture>
     <div class="wrap hero-inner">
       <div class="hero-tx">
-        <p class="hero-for"><svg aria-hidden="true"><use href="#i-ribbon"/></svg>Para quem está em quimioterapia, radioterapia ou imunoterapia</p>
-        <h1 id="hero-title">Enjoo, falta de apetite e perda de peso <em class="shine">não precisam ser o preço</em> do seu tratamento contra o câncer</h1>
-        <p class="hero-sub">Eu monto estratégias alimentares para a sua rotina, os seus sintomas e a fase do seu tratamento, com base nos protocolos mais atuais de nutrição oncológica. Você recebe em até 48 horas e conta com <strong>30 dias de acompanhamento comigo pelo WhatsApp</strong>.</p>
+        <p class="hero-for"><svg aria-hidden="true"><use href="#i-ribbon"/></svg>Para quem está em tratamento oncológico, em diferentes fases do cuidado</p>
+        <h1 id="hero-title">Seu tratamento exige muito. Sua alimentação merece <em class="shine">cuidado especializado</em>.</h1>
+        <p class="hero-sub">Monto estratégias alimentares personalizadas para cada fase da sua jornada, planejadas para potencializar o protocolo do seu tratamento, com base nas melhores práticas da nutrição oncológica. Com meu <strong>acompanhamento contínuo</strong>, seguimos juntos, tirando suas dúvidas, acompanhando sua evolução e atenuando os efeitos colaterais do tratamento.</p>
         <div class="hero-cta">
           <a class="btn" href="https://api.cqc.onpromedia.com.br/t/69643DB5" target="_blank" rel="noopener" data-cta="hero">
-            <svg aria-hidden="true"><use href="#i-wa"/></svg> Quero cuidar da minha alimentação
+            <svg aria-hidden="true"><use href="#i-wa"/></svg> Quero agendar minha consulta
           </a>
           <p class="btn-note">Você fala direto com a minha equipe pelo WhatsApp.</p>
         </div>
         <div class="hero-proof">
-          <div><b>+40 mil</b><span>pacientes atendidos</span></div>
-          <div><b>+20 anos</b><span>em oncologia</span></div>
+          <div><b>+30 mil</b><span>pacientes oncológicos</span></div>
+          <div><b>20 anos</b><span>dedicados à oncologia</span></div>
           <div><b>Mestre</b><span>em Nutrição e Saúde</span></div>
         </div>
       </div>
@@ -555,24 +517,22 @@
   <section class="authbar" aria-label="Formação e atuação">
     <div class="ab-track">
       <ul class="ab-list">
-        <li><svg aria-hidden="true"><use href="#i-heart"/></svg>Já atendi mais de 40 mil pacientes oncológicos</li>
-        <li><svg aria-hidden="true"><use href="#i-hosp"/></svg>Atuo em hospital referência em oncologia na Bahia</li>
-        <li><svg aria-hidden="true"><use href="#i-group"/></svg>Faço parte da comissão organizadora do Congresso Internacional de Nutrição Oncológica (CINO 2026)</li>
-        <li><svg aria-hidden="true"><use href="#i-mic"/></svg>Dou palestras em congressos de nutrição oncológica</li>
-        <li><svg aria-hidden="true"><use href="#i-grad"/></svg>Sou professora de pós-graduação em nutrição oncológica</li>
-        <li><svg aria-hidden="true"><use href="#i-book"/></svg>Publiquei livros e artigos científicos em nutrição oncológica</li>
-        <li><svg aria-hidden="true"><use href="#i-award"/></svg>Sou mestre em Alimentos, Nutrição e Saúde</li>
-        <li><svg aria-hidden="true"><use href="#i-group"/></svg>Sou membro da Sociedade Brasileira de Nutrição Oncológica</li>
+        <li><svg aria-hidden="true"><use href="#i-award"/></svg>20 anos de dedicação exclusiva à oncologia</li>
+        <li><svg aria-hidden="true"><use href="#i-heart"/></svg>+30 mil pacientes oncológicos atendidos</li>
+        <li><svg aria-hidden="true"><use href="#i-group"/></svg>Especialista em Nutrição Oncológica pela SBNO</li>
+        <li><svg aria-hidden="true"><use href="#i-grad"/></svg>Mestre em Alimentos, Nutrição e Saúde pela UFBA</li>
+        <li><svg aria-hidden="true"><use href="#i-book"/></svg>Sócia-fundadora e Diretora Científica da Academia Brasileira de Nutrição Oncológica (ABNO)</li>
+        <li><svg aria-hidden="true"><use href="#i-mic"/></svg>Palestrante em eventos médicos de oncologia e referência em nutrição oncológica</li>
+        <li><svg aria-hidden="true"><use href="#i-grad"/></svg>Professora de Pós-Graduação em Nutrição Oncológica</li>
       </ul>
       <ul class="ab-list" aria-hidden="true">
-        <li><svg aria-hidden="true"><use href="#i-heart"/></svg>Já atendi mais de 40 mil pacientes oncológicos</li>
-        <li><svg aria-hidden="true"><use href="#i-hosp"/></svg>Atuo em hospital referência em oncologia na Bahia</li>
-        <li><svg aria-hidden="true"><use href="#i-group"/></svg>Faço parte da comissão organizadora do Congresso Internacional de Nutrição Oncológica (CINO 2026)</li>
-        <li><svg aria-hidden="true"><use href="#i-mic"/></svg>Dou palestras em congressos de nutrição oncológica</li>
-        <li><svg aria-hidden="true"><use href="#i-grad"/></svg>Sou professora de pós-graduação em nutrição oncológica</li>
-        <li><svg aria-hidden="true"><use href="#i-book"/></svg>Publiquei livros e artigos científicos em nutrição oncológica</li>
-        <li><svg aria-hidden="true"><use href="#i-award"/></svg>Sou mestre em Alimentos, Nutrição e Saúde</li>
-        <li><svg aria-hidden="true"><use href="#i-group"/></svg>Sou membro da Sociedade Brasileira de Nutrição Oncológica</li>
+        <li><svg aria-hidden="true"><use href="#i-award"/></svg>20 anos de dedicação exclusiva à oncologia</li>
+        <li><svg aria-hidden="true"><use href="#i-heart"/></svg>+30 mil pacientes oncológicos atendidos</li>
+        <li><svg aria-hidden="true"><use href="#i-group"/></svg>Especialista em Nutrição Oncológica pela SBNO</li>
+        <li><svg aria-hidden="true"><use href="#i-grad"/></svg>Mestre em Alimentos, Nutrição e Saúde pela UFBA</li>
+        <li><svg aria-hidden="true"><use href="#i-book"/></svg>Sócia-fundadora e Diretora Científica da Academia Brasileira de Nutrição Oncológica (ABNO)</li>
+        <li><svg aria-hidden="true"><use href="#i-mic"/></svg>Palestrante em eventos médicos de oncologia e referência em nutrição oncológica</li>
+        <li><svg aria-hidden="true"><use href="#i-grad"/></svg>Professora de Pós-Graduação em Nutrição Oncológica</li>
       </ul>
     </div>
   </section>
@@ -584,36 +544,46 @@
         <h2 class="h2" id="sint-title">Talvez seja isso que você está vivendo agora</h2>
         <p class="lead">Quase todo paciente em tratamento passa por pelo menos um desses pontos. E cada um deles pede uma estratégia alimentar própria.</p>
       </div>
-      <div class="grid-3">
+      <div class="grid-4">
         <article class="card" data-reveal>
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 8l3 3M11 8l-3 3M13 8l3 3M16 8l-3 3"/><path d="M7.5 16.5c1.2-1 2.3-1 3.3 0s2.1 1 3.2 0 2.2-1 3 0"/></svg></span>
-          <h3>Enjoo que não passa</h3>
-          <p>Só de sentir o cheiro da comida o estômago já vira. Os dias depois da sessão parecem não acabar.</p>
-        </article>
-        <article class="card" data-reveal>
-          <span class="ico t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8a2 2 0 002 2h0a2 2 0 002-2V3M9 3v18"/><path d="M17 3c-1.7 0-3 2-3 5s1.3 4 3 4v9"/></svg></span>
-          <h3>Comida sem gosto ou com gosto de metal</h3>
-          <p>O paladar muda e aquilo que você gostava passa a ser difícil de engolir.</p>
-        </article>
-        <article class="card" data-reveal>
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M5.6 5.6l2.1 2.1M3 12h3M18.4 5.6l-2.1 2.1M21 12h-3"/><path d="M6 16c1.8-2.5 3.8-3.5 6-3.5s4.2 1 6 3.5c-1.8 2.5-3.8 3.5-6 3.5s-4.2-1-6-3.5z"/></svg></span>
-          <h3>Feridas na boca e dor para engolir</h3>
-          <p>Comer vira um sofrimento e você acaba pulando refeições sem perceber.</p>
-        </article>
-        <article class="card" data-reveal>
-          <span class="ico t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="17" height="10" rx="2"/><path d="M22 11v2"/><path d="M5 10v4"/></svg></span>
+          <div class="card-top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="17" height="10" rx="2"/><path d="M22 11v2"/><path d="M5 10v4"/></svg></span><span class="card-n">01</span></div>
           <h3>Perda de peso e fraqueza</h3>
-          <p>A roupa fica larga, a energia some e até levantar da cama cansa.</p>
+          <p>A roupa fica larga, a força diminui e até as atividades mais simples começam a exigir esforço.</p>
         </article>
         <article class="card" data-reveal>
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 015.8 1c0 2-3 3-3 3M12 17h.01"/></svg></span>
+          <div class="card-top"><span class="ico t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 015.8 1c0 2-3 3-3 3M12 17h.01"/></svg></span><span class="card-n">02</span></div>
           <h3>Medo de comer algo que atrapalhe</h3>
-          <p>Será que pode açúcar? E leite? Cada refeição vem acompanhada de dúvida e culpa.</p>
+          <p>Açúcar pode? E leite? São tantas orientações diferentes que fica difícil saber o que realmente é seguro.</p>
         </article>
         <article class="card" data-reveal>
-          <span class="ico t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 18h4"/><path d="M9 7h6M9 10.5h4"/></svg></span>
-          <h3>Informação demais, segurança de menos</h3>
-          <p>Internet, grupos, parentes. Cada um fala uma coisa e ninguém olhou o seu caso de verdade.</p>
+          <div class="card-top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8a2 2 0 002 2h0a2 2 0 002-2V3M9 3v18"/><path d="M17 3c-1.7 0-3 2-3 5s1.3 4 3 4v9"/></svg></span><span class="card-n">03</span></div>
+          <h3>Falta de apetite</h3>
+          <p>A fome desaparece, as refeições ficam difíceis e você se preocupa por não conseguir comer o suficiente.</p>
+        </article>
+        <article class="card" data-reveal>
+          <div class="card-top"><span class="ico t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 8l3 3M11 8l-3 3M13 8l3 3M16 8l-3 3"/><path d="M7.5 16.5c1.2-1 2.3-1 3.3 0s2.1 1 3.2 0 2.2-1 3 0"/></svg></span><span class="card-n">04</span></div>
+          <h3>Enjoo que não passa</h3>
+          <p>Só de sentir o cheiro da comida, o estômago já vira. Comer se torna um desafio.</p>
+        </article>
+        <article class="card" data-reveal>
+          <div class="card-top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 000-7.8z"/><path d="M6 12h3l1.5-2.5 2 5 1.5-2.5h4"/></svg></span><span class="card-n">05</span></div>
+          <h3>Alimentação com colostomia ou ileostomia</h3>
+          <p>O que posso comer? Como lidar com gases, alterações na bolsa e o receio de passar mal após as refeições?</p>
+        </article>
+        <article class="card" data-reveal>
+          <div class="card-top"><span class="ico t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 13h2.5l1.5-4 2 7 1.5-3H17"/></svg></span><span class="card-n">06</span></div>
+          <h3>Dificuldade para comer após uma cirurgia</h3>
+          <p>O corpo mudou, a alimentação já não é a mesma e surgem dúvidas sobre como se nutrir durante a recuperação.</p>
+        </article>
+        <article class="card" data-reveal>
+          <div class="card-top"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8a2 2 0 002 2h0a2 2 0 002-2V3M9 3v18"/><path d="M17 3c-1.7 0-3 2-3 5s1.3 4 3 4v9"/></svg></span><span class="card-n">07</span></div>
+          <h3>Comida sem gosto ou com gosto de metal</h3>
+          <p>O paladar muda e até os alimentos de que você mais gostava deixam de ser agradáveis.</p>
+        </article>
+        <article class="card" data-reveal>
+          <div class="card-top"><span class="ico t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 01-11.6 7.1L4 20.5l1.5-4.9A8 8 0 1121 12z"/><path d="M12 8v4M12 15.5h.01"/></svg></span><span class="card-n">08</span></div>
+          <h3>Feridas na boca e dor para engolir</h3>
+          <p>A dor e o desconforto dificultam a alimentação, justamente quando seu corpo precisa de cuidados.</p>
         </article>
       </div>
     </div>
@@ -636,121 +606,44 @@
         <p>Com estratégias feitas para o seu momento, a alimentação deixa de ser mais um problema e passa a ser uma aliada do seu tratamento.</p>
         <p>Quanto antes você começa, mais o seu corpo tem chance de chegar forte nas próximas sessões.</p>
         <a class="btn btn-white" href="https://api.cqc.onpromedia.com.br/t/69643DB5" target="_blank" rel="noopener" data-cta="alerta">
-          <svg aria-hidden="true"><use href="#i-wa"/></svg> Quero começar agora
+          <svg aria-hidden="true"><use href="#i-wa"/></svg> Quero agendar minha consulta
         </a>
       </div>
     </div>
   </section>
 
-  <!-- 5. Autoridade -->
+  <!-- 5. Autoridade (vídeo do CINO sem som, em loop) -->
   <section class="sec" id="sobre" aria-labelledby="sobre-title">
     <div class="wrap about">
       <div class="about-photo" data-reveal>
-        <picture>
-          <source type="image/webp" srcset="assets/img/palco-retrato-500.webp 500w, assets/img/palco-retrato-800.webp 800w" sizes="(max-width: 1023px) 92vw, 480px">
-          <img src="assets/img/palco-retrato-800.jpg" srcset="assets/img/palco-retrato-500.jpg 500w, assets/img/palco-retrato-800.jpg 800w" sizes="(max-width: 1023px) 92vw, 480px" width="800" height="1199" loading="lazy" alt="Tatiane Rios palestrando no Congresso Internacional de Nutrição Oncológica (CINO 2026)">
-        </picture>
-        <div class="about-badge">
-          <svg aria-hidden="true"><use href="#i-check"/></svg>
-          <div><b>Comissão organizadora do CINO 2026</b><span>Congresso Internacional de Nutrição Oncológica</span></div>
-        </div>
+        <figure class="stage-video">
+          <video id="stage-video" muted loop playsinline preload="none" poster="assets/video/cino-palco-poster.jpg" aria-label="Vídeo sem som: auditório do Congresso Internacional de Nutrição Oncológica 2026 e Tatiane Rios palestrando no palco">
+            <source data-src="assets/video/cino-palco.webm" type="video/webm">
+            <source data-src="assets/video/cino-palco.mp4" type="video/mp4">
+          </video>
+          <figcaption><i></i> CINO 2026 · Congresso Internacional de Nutrição Oncológica</figcaption>
+        </figure>
       </div>
       <div class="txt" data-reveal>
         <h2 class="h2" id="sobre-title">Prazer, eu sou a Tatiane Rios</h2>
-        <p style="margin-top:18px">Há mais de 20 anos eu cuido da alimentação de pessoas em tratamento contra o câncer. Trabalho dentro de um hospital referência em oncologia na Bahia e, ao longo da carreira, já são mais de 40 mil pacientes atendidos.</p>
-        <p>Também estou do outro lado, ensinando. Sou professora de pós-graduação em nutrição oncológica, faço parte da comissão organizadora do Congresso Internacional de Nutrição Oncológica (CINO 2026) e dou palestras em congressos e simpósios de oncologia. Também publiquei livros e artigos científicos na área.</p>
-        <p>Toda essa experiência me ensinou que não existe receita pronta. Existe escuta, estudo e uma estratégia pensada para o que você está vivendo agora.</p>
+        <p style="margin-top:18px">Sou nutricionista especializada em oncologia e há mais de 20 anos dedico minha carreira exclusivamente ao cuidado de pessoas com câncer.</p>
+        <p>Ao longo dessa trajetória, já acompanhei mais de 30 mil pacientes oncológicos, unindo a experiência clínica em serviços de referência ao conhecimento científico para oferecer um cuidado individualizado.</p>
+        <p>Minha atuação também vai além do consultório. Sou sócia-fundadora e Diretora Científica da Academia Brasileira de Nutrição Oncológica (ABNO), professora de pós-graduação e compartilho minha experiência em congressos médicos e eventos científicos de oncologia.</p>
+        <p>Mas, depois de tantos anos, uma das minhas maiores certezas é que nenhum paciente é igual ao outro. Por isso, meu trabalho começa pela escuta e por compreender sua história, seu tratamento e suas necessidades, para construir uma estratégia nutricional realmente pensada para você.</p>
         <ul class="creds">
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Sou mestre em Alimentos, Nutrição e Saúde</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Faço parte da comissão organizadora do Congresso Internacional de Nutrição Oncológica (CINO 2026)</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Sou membro da Sociedade Brasileira de Nutrição Oncológica</li>
-          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Sou professora de pós-graduação para nutricionistas</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Especialista em Nutrição Oncológica pela Sociedade Brasileira de Nutrição Oncológica (SBNO)</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Mestre em Alimentos, Nutrição e Saúde pela UFBA</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg>Sócia-fundadora e Diretora Científica da Academia Brasileira de Nutrição Oncológica (ABNO)</li>
         </ul>
-        <div style="margin-top:30px">
+        <div class="stats" data-reveal>
+          <div class="stat"><b data-count="20" data-suf=" anos">20 anos</b><span>de dedicação exclusiva à oncologia</span></div>
+          <div class="stat"><b data-count="30" data-pre="+" data-suf=" mil">+30 mil</b><span>pacientes oncológicos atendidos</span></div>
+        </div>
+        <div style="margin-top:28px">
           <a class="btn" href="https://api.cqc.onpromedia.com.br/t/69643DB5" target="_blank" rel="noopener" data-cta="sobre">
             <svg aria-hidden="true"><use href="#i-wa"/></svg> Quero agendar minha consulta
           </a>
         </div>
-      </div>
-    </div>
-    <div class="wrap">
-      <div class="stats" data-reveal>
-        <div class="stat"><b data-count="40" data-pre="+" data-suf=" mil">+40 mil</b><span>pacientes atendidos ao longo da minha carreira</span></div>
-        <div class="stat"><b data-count="20" data-pre="+" data-suf=" anos">+20 anos</b><span>de dedicação à nutrição oncológica</span></div>
-        <div class="stat"><b data-count="48" data-suf="h">48h</b><span>para receber as suas estratégias alimentares</span></div>
-        <div class="stat"><b data-count="30" data-suf=" dias">30 dias</b><span>de acompanhamento pelo WhatsApp</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5b. Vídeo do CINO 2026 (sem som, em loop) -->
-  <section class="stage" aria-labelledby="stage-title">
-    <div class="wrap stage-inner">
-      <div class="stage-tx" data-reveal>
-        <h2 id="stage-title">O mesmo conhecimento que eu compartilho com outros profissionais da oncologia</h2>
-        <p>No Congresso Internacional de Nutrição Oncológica (CINO 2026), dividi a experiência de mais de 20 anos com nutricionistas, médicos e equipes de oncologia. É esse mesmo cuidado, baseado em ciência, que eu levo para cada paciente que acompanho.</p>
-        <ul class="stage-facts">
-          <li><span class="sf-ico"><svg aria-hidden="true"><use href="#i-heart"/></svg></span><div><b>+40 mil</b><span>pacientes oncológicos atendidos ao longo da minha carreira</span></div></li>
-          <li><span class="sf-ico"><svg aria-hidden="true"><use href="#i-award"/></svg></span><div><b>+20 anos</b><span>dedicados à nutrição oncológica</span></div></li>
-          <li><span class="sf-ico"><svg aria-hidden="true"><use href="#i-mic"/></svg></span><div><b>CINO 2026</b><span>palestrante e comissão organizadora do congresso</span></div></li>
-        </ul>
-        <a class="btn" href="https://api.cqc.onpromedia.com.br/t/69643DB5" target="_blank" rel="noopener" data-cta="video-palco">
-          <svg aria-hidden="true"><use href="#i-wa"/></svg> Quero marcar minha consulta
-        </a>
-      </div>
-      <figure class="stage-video" data-reveal>
-        <video id="stage-video" muted loop playsinline preload="none" poster="assets/video/cino-palco-poster.jpg" aria-label="Vídeo sem som: auditório do Congresso Internacional de Nutrição Oncológica 2026 e Tatiane Rios palestrando no palco">
-          <source data-src="assets/video/cino-palco.webm" type="video/webm">
-          <source data-src="assets/video/cino-palco.mp4" type="video/mp4">
-        </video>
-        <figcaption><i></i> CINO 2026 · Salvador, Bahia</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- 6. Nos palcos da nutrição oncológica (fotos reais de congressos) -->
-  <section class="sec sec-soft" id="palcos" aria-labelledby="palco-title">
-    <div class="wrap">
-      <div class="sec-head center" data-reveal>
-        <h2 class="h2" id="palco-title">Nos palcos da nutrição oncológica</h2>
-        <p class="lead">O que aprendo com os pacientes no hospital, eu levo para congressos e simpósios, onde falo para nutricionistas, médicos e equipes de oncologia. E é esse mesmo conhecimento que chega até você no atendimento online.</p>
-      </div>
-      <div class="bento">
-        <figure class="b-item b-tall" data-reveal>
-          <picture>
-            <source type="image/webp" srcset="assets/img/palco-tati-500.webp 500w, assets/img/palco-tati-800.webp 800w" sizes="(max-width: 759px) 50vw, 300px">
-            <img src="assets/img/palco-tati-800.jpg" srcset="assets/img/palco-tati-500.jpg 500w, assets/img/palco-tati-800.jpg 800w" sizes="(max-width: 759px) 50vw, 300px" width="800" height="1199" loading="lazy" alt="Tatiane Rios palestrando no Congresso Internacional de Nutrição Oncológica (CINO 2026)">
-          </picture>
-          <figcaption>CINO 2026 · Congresso Internacional de Nutrição Oncológica</figcaption>
-        </figure>
-        <figure class="b-item b-wide" data-reveal>
-          <picture>
-            <source type="image/webp" srcset="assets/img/palco-plateia-500.webp 500w, assets/img/palco-plateia-834.webp 834w" sizes="(max-width: 759px) 100vw, 600px">
-            <img src="assets/img/palco-plateia-834.jpg" srcset="assets/img/palco-plateia-500.jpg 500w, assets/img/palco-plateia-834.jpg 834w" sizes="(max-width: 759px) 100vw, 600px" width="834" height="626" loading="lazy" alt="Auditório do CINO 2026 durante palestra de Tatiane Rios">
-          </picture>
-          <figcaption>Palestra para nutricionistas e profissionais da oncologia no Congresso Internacional de Nutrição Oncológica</figcaption>
-        </figure>
-        <figure class="b-item b-tall" data-reveal>
-          <picture>
-            <source type="image/webp" srcset="assets/img/palco-close-500.webp 500w, assets/img/palco-close-800.webp 800w" sizes="(max-width: 759px) 50vw, 300px">
-            <img src="assets/img/palco-close-800.jpg" srcset="assets/img/palco-close-500.jpg 500w, assets/img/palco-close-800.jpg 800w" sizes="(max-width: 759px) 50vw, 300px" width="800" height="1199" loading="lazy" alt="Tatiane Rios apresentando dados de estudos clínicos">
-          </picture>
-          <figcaption>Apresentando dados de estudos clínicos</figcaption>
-        </figure>
-        <figure class="b-item" data-reveal>
-          <picture>
-            <source type="image/webp" srcset="assets/img/palco-cino-600.webp 600w, assets/img/palco-cino-1000.webp 1000w" sizes="(max-width: 759px) 50vw, 300px">
-            <img src="assets/img/palco-cino-1000.jpg" srcset="assets/img/palco-cino-600.jpg 600w, assets/img/palco-cino-1000.jpg 1000w" sizes="(max-width: 759px) 50vw, 300px" width="1000" height="666" loading="lazy" alt="Tatiane Rios no palco do CINO 2026 falando sobre cirurgia oncológica e perda muscular">
-          </picture>
-          <figcaption>Cirurgia oncológica e perda muscular</figcaption>
-        </figure>
-        <figure class="b-item" data-reveal>
-          <picture>
-            <source type="image/webp" srcset="assets/img/palco-simposio-600.webp 600w, assets/img/palco-simposio-1000.webp 1000w" sizes="(max-width: 759px) 50vw, 300px">
-            <img src="assets/img/palco-simposio-1000.jpg" srcset="assets/img/palco-simposio-600.jpg 600w, assets/img/palco-simposio-1000.jpg 1000w" sizes="(max-width: 759px) 50vw, 300px" width="1000" height="667" loading="lazy" alt="Tatiane Rios palestrando no IV Simpósio Internacional de Tumores Femininos da Oncologia D’Or">
-          </picture>
-          <figcaption>Simpósio Internacional de Tumores Femininos · Oncologia D’Or</figcaption>
-        </figure>
       </div>
     </div>
   </section>
@@ -768,44 +661,36 @@
             <span class="tl-dot"><svg aria-hidden="true"><use href="#i-video"/></svg></span>
             <div class="tl-card">
               <span class="tl-n">Etapa 1</span>
-              <h3>Consulta completa por vídeo</h3>
-              <p>Reservo cerca de 1 hora para entender o seu diagnóstico, o tratamento que você está fazendo, os sintomas, a sua rotina e o que você gosta e consegue comer.</p>
-              <ul><li><svg aria-hidden="true"><use href="#i-check"/></svg>Quem cozinha e quais são os seus horários</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Sintomas de cada fase do ciclo</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Preferências e o que está difícil de engolir</li></ul>
-            </div>
-          </li>
-          <li class="tl-step" data-reveal>
-            <span class="tl-dot"><svg aria-hidden="true"><use href="#i-lab"/></svg></span>
-            <div class="tl-card">
-              <span class="tl-n">Etapa 2</span>
-              <h3>Análise de exames e medicações</h3>
-              <p>Eu avalio os seus exames e os medicamentos do tratamento junto com os protocolos mais atuais de nutrição oncológica antes de qualquer orientação.</p>
-              <ul><li><svg aria-hidden="true"><use href="#i-check"/></svg>Marcadores de perda de peso e de músculo</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Interações entre alimentos e medicações</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Necessidade de suplementação, quando houver</li></ul>
+              <h3>Consulta e avaliação nutricional completa</h3>
+              <p>Em uma consulta online de aproximadamente uma hora, avalio seu histórico, tratamento, exames, medicamentos, sintomas e rotina alimentar para compreender suas necessidades e definir as melhores estratégias nutricionais.</p>
+              <ul><li><svg aria-hidden="true"><use href="#i-check"/></svg>Avaliação clínica e nutricional detalhada</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Análise de exames, medicamentos e necessidades específicas</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Primeiras orientações já durante a consulta</li></ul>
             </div>
           </li>
           <li class="tl-step" data-reveal>
             <span class="tl-dot"><svg aria-hidden="true"><use href="#i-plate"/></svg></span>
             <div class="tl-card">
-              <span class="tl-n">Etapa 3</span>
-              <h3>Estratégias alimentares em até 48 horas</h3>
-              <p>Nada de cardápio pronto. Eu monto estratégias para os sintomas que mais te incomodam, encaixadas na sua rotina e na fase do tratamento.</p>
-              <ul><li><svg aria-hidden="true"><use href="#i-check"/></svg>O que comer antes, durante e depois das sessões</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Táticas para enjoo, paladar, boca e intestino</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Substituições e ideias práticas para o dia a dia</li></ul>
+              <span class="tl-n">Etapa 2</span>
+              <h3>Plano alimentar personalizado e orientações detalhadas</h3>
+              <p>Você recebe um plano pensado para o seu tratamento, seus sintomas, sua rotina e suas preferências. O objetivo é tornar a alimentação mais fácil e prazerosa, ajudando seu corpo a receber os nutrientes de que precisa.</p>
+              <ul><li><svg aria-hidden="true"><use href="#i-check"/></svg>Alimentos e preparações adaptados ao seu paladar e às suas necessidades</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Opções e substituições que facilitam o dia a dia</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Orientações detalhadas para lidar com os desafios do tratamento</li></ul>
+              <p class="tl-note"><svg aria-hidden="true"><use href="#i-check"/></svg>Plano e orientações entregues em até 48 horas após a consulta.</p>
             </div>
           </li>
           <li class="tl-step" data-reveal>
             <span class="tl-dot"><svg aria-hidden="true"><use href="#i-chat"/></svg></span>
             <div class="tl-card">
-              <span class="tl-n">Etapa 4</span>
-              <h3>30 dias de acompanhamento pelo WhatsApp</h3>
-              <p>O tratamento muda de uma semana para outra, e a alimentação precisa acompanhar. Eu fico por perto para ajustar o que for preciso.</p>
-              <ul><li><svg aria-hidden="true"><use href="#i-check"/></svg>Ajustes entre um ciclo e outro</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Dúvidas respondidas no dia a dia</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Orientação para os dias mais difíceis</li></ul>
+              <span class="tl-n">Etapa 3</span>
+              <h3>Acompanhamento contínuo</h3>
+              <p>O cuidado não termina com a entrega do plano. Durante o acompanhamento, esclareço suas dúvidas e adapto as orientações conforme a evolução do tratamento e suas necessidades.</p>
+              <ul><li><svg aria-hidden="true"><use href="#i-check"/></svg>Suporte individualizado pelo WhatsApp</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Ajustes conforme sintomas e evolução do tratamento</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Modalidades de acompanhamento de 30 ou 90 dias</li></ul>
             </div>
           </li>
         </ol>
         <aside class="diff" data-reveal>
-          <h3>O que torna esse acompanhamento diferente</h3>
-          <ul><li><b>Protocolos atualizados</b><span>Estratégias baseadas nas diretrizes mais recentes de nutrição oncológica, as mesmas que eu ensino em congressos e na pós-graduação.</span></li><li><b>Feito para a sua rotina</b><span>Eu levo em conta quem cozinha, os seus horários e o que você consegue comer em cada fase.</span></li><li><b>Alinhado ao seu tratamento</b><span>Quimioterapia, radioterapia, imunoterapia ou cirurgia. Cada tratamento pede um cuidado diferente.</span></li><li><b>Acompanhamento de perto</b><span>O cuidado não termina na consulta. São 30 dias de ajustes comigo pelo WhatsApp.</span></li></ul>
+          <h3>O que torna esse acompanhamento diferente?</h3>
+          <ul><li><b>20 anos de experiência aplicados ao seu cuidado</b><span>Um acompanhamento especializado, que une conhecimento científico e experiência clínica para atender às particularidades de cada paciente.</span></li><li><b>Avaliação que considera você por inteiro</b><span>Seu diagnóstico, tratamento, exames, medicamentos e sintomas orientam cada decisão nutricional.</span></li><li><b>Alimentação que se adapta à sua vida</b><span>Um plano personalizado para tornar a alimentação mais fácil, prazerosa e adequada às suas necessidades.</span></li><li><b>Cuidado que continua além da consulta</b><span>Acompanhamento próximo para esclarecer dúvidas e ajustar as orientações conforme seu tratamento evolui.</span></li></ul>
           <a class="btn btn-white" href="https://api.cqc.onpromedia.com.br/t/69643DB5" target="_blank" rel="noopener" data-cta="como-funciona">
-            <svg aria-hidden="true"><use href="#i-wa"/></svg> Quero começar meu acompanhamento
+            <svg aria-hidden="true"><use href="#i-wa"/></svg> Quero agendar minha consulta
           </a>
         </aside>
       </div>
@@ -916,7 +801,7 @@
   <section class="final" aria-labelledby="final-title">
     <div class="wrap">
       <h2 id="final-title">Você não precisa atravessar o tratamento sem saber o que comer</h2>
-      <p>São mais de 20 anos na oncologia e mais de 40 mil pacientes atendidos. Quero te ajudar a passar por essa fase com estratégias feitas para o seu momento.</p>
+      <p>São mais de 20 anos dedicados à oncologia e mais de 30 mil pacientes atendidos. Quero te ajudar a passar por essa fase com estratégias feitas para o seu momento.</p>
       <a class="btn btn-white" href="https://api.cqc.onpromedia.com.br/t/69643DB5" target="_blank" rel="noopener" data-cta="final">
         <svg aria-hidden="true"><use href="#i-wa"/></svg> Quero agendar minha consulta
       </a>
@@ -936,7 +821,6 @@
       <b>Navegação</b>
       <a href="#sintomas">Sintomas no tratamento</a>
       <a href="#sobre">Quem sou eu</a>
-      <a href="#palcos">Congressos e palestras</a>
       <a href="#como-funciona">Como funciona</a>
       <a href="#depoimentos">Depoimentos</a>
       <a href="#perguntas">Perguntas frequentes</a>
@@ -958,7 +842,7 @@
 
 <div class="sticky-cta" id="sticky">
   <a class="btn" href="https://api.cqc.onpromedia.com.br/t/69643DB5" target="_blank" rel="noopener" data-cta="fixo-mobile">
-    <svg aria-hidden="true"><use href="#i-wa"/></svg> Falar com a minha equipe
+    <svg aria-hidden="true"><use href="#i-wa"/></svg> Agendar minha consulta
   </a>
 </div>
 
